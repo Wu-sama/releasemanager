@@ -13,11 +13,15 @@ import org.springframework.stereotype.Service
 class ReleaseVersionServiceImpl @Autowired constructor(private val systemRepository: SystemRepository) :
     ReleaseVersionService {
     override fun deploy(serviceDto: ServiceDto): Int {
+        return getSystemModel(serviceDto).version
+    }
+
+    private fun getSystemModel(serviceDto: ServiceDto): SystemModel {
         val latestSystemModel = systemRepository.findLatestSystemModel()
-            ?: return systemRepository.save(SystemModel(version = 1, services = listOf(serviceDto.toModel()))).version
+            ?: return systemRepository.save(SystemModel(version = 1, services = listOf(serviceDto.toModel())))
         val newService = latestSystemModel.services.singleOrNull { it.name == serviceDto.name }
         if (newService != null && newService.version == serviceDto.version) {
-            return latestSystemModel.version
+            return latestSystemModel
         }
 
         return systemRepository.save(
@@ -25,7 +29,7 @@ class ReleaseVersionServiceImpl @Autowired constructor(private val systemReposit
                 version = 1,
                 services = getNewServiceList(latestSystemModel.services, serviceDto, newService)
             )
-        ).version
+        )
     }
 
     private fun getNewServiceList(
