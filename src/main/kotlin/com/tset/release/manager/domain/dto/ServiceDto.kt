@@ -1,4 +1,4 @@
-package com.tset.release.manager.model.dto
+package com.tset.release.manager.domain.dto
 
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
