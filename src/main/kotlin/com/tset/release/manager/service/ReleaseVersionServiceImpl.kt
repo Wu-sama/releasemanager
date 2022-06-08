@@ -16,6 +16,7 @@ class ReleaseVersionServiceImpl @Autowired constructor(private val systemReposit
         return getSystemModel(serviceDto).version
     }
 
+    // todo refactoring
     private fun getSystemModel(serviceDto: ServiceDto): SystemModel {
         val latestSystemModel = systemRepository.findLatestSystemModel()
             ?: return systemRepository.save(SystemModel(version = 1, services = listOf(serviceDto.toModel())))
