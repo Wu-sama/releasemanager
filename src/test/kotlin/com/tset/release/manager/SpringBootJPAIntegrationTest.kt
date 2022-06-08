@@ -33,4 +33,16 @@ class SpringBootJPAIntegrationTest @Autowired constructor(private val systemRepo
         assertEquals(foundEntity, systemModelEntity)
         assertNotEquals(0, systemModelEntity.id)
     }
+
+    @Test
+    fun find_system_model_with_top_value_system_model() {
+        systemRepository.deleteAll()
+        systemRepository.save(SystemModel(version = 2))
+        systemRepository.save(SystemModel(version = 3))
+
+        val foundEntity = systemRepository.findLatestSystemModel()
+
+        assertNotNull(foundEntity)
+        assertNotEquals(3L, foundEntity?.version)
+    }
 }
