@@ -1,4 +1,4 @@
-package com.tset.release.manager
+package com.tset.release.manager.service
 
 import com.tset.release.manager.domain.dto.ServiceDto
 

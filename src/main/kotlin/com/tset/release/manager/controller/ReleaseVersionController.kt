@@ -1,6 +1,6 @@
 package com.tset.release.manager.controller
 
-import com.tset.release.manager.ReleaseVersionService
+import com.tset.release.manager.service.ReleaseVersionService
 import com.tset.release.manager.domain.dto.ServiceDto
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/release/version")
 class ReleaseVersionController @Autowired constructor(private val releaseVersionService: ReleaseVersionService) {
     @PostMapping(value = ["/deploy"], consumes = [MediaType.APPLICATION_JSON_VALUE])
-    fun deploy(@RequestBody serviceDto: ServiceDto): Int { // it is better to wrap response in another class. This is better for front
+    fun deploy(@RequestBody serviceDto: ServiceDto): Int {
+        // it is better to wrap response in another class. This is better for front
         return releaseVersionService.deploy(serviceDto)
     }
 

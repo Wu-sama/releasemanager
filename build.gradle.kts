@@ -19,6 +19,12 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.2")
 	implementation("org.hibernate.validator:hibernate-validator:7.0.4.Final")
 
+	//h2
+	implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation ("org.springframework.boot:spring-boot-starter-web")
+	developmentOnly ("org.springframework.boot:spring-boot-devtools")
+	runtimeOnly ("com.h2database:h2")
+
 	//swagger
 	implementation("org.springdoc:springdoc-openapi-data-rest:1.6.8")
 	implementation("org.springdoc:springdoc-openapi-ui:1.6.8")

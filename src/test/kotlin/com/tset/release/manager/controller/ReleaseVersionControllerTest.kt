@@ -1,7 +1,7 @@
 package com.tset.release.manager.controller
 
 import com.ninjasquad.springmockk.MockkBean
-import com.tset.release.manager.ReleaseVersionService
+import com.tset.release.manager.service.ReleaseVersionService
 import com.tset.release.manager.domain.dto.ServiceDto
 import io.mockk.every
 import io.mockk.verify
@@ -44,7 +44,7 @@ internal class ReleaseVersionControllerTest @Autowired constructor(
 
     @Test
     fun get_list_of_services() {
-        every { releaseVersionService.getServices(any()) } returns listOf<ServiceDto>(
+        every { releaseVersionService.getServices(any()) } returns listOf(
             ServiceDto(
                 name = "Service A",
                 version = 1
