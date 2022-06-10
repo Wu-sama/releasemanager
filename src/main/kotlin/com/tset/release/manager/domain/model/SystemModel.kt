@@ -1,5 +1,6 @@
 package com.tset.release.manager.domain.model
 
+import javax.persistence.CascadeType
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.FetchType
@@ -17,6 +18,6 @@ data class SystemModel(
     val id: Long = 0,
     @Column(unique=true)
     val version:Int = 0,
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
     val services: List<ServiceModel> = emptyList()
 )
