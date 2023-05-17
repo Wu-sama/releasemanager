@@ -1,7 +1,7 @@
-package com.tset.release.manager.controller
+package com.release.manager.controller
 
-import com.tset.release.manager.service.ReleaseVersionService
-import com.tset.release.manager.domain.dto.ServiceDto
+import com.release.manager.service.ReleaseVersionService
+import com.release.manager.domain.dto.ServiceDto
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping

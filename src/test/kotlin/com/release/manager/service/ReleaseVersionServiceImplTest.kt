@@ -1,10 +1,10 @@
-package com.tset.release.manager.service
+package com.release.manager.service
 
 import com.ninjasquad.springmockk.MockkBean
-import com.tset.release.manager.data.access.repository.SystemRepository
-import com.tset.release.manager.domain.dto.ServiceDto
-import com.tset.release.manager.domain.dto.toModel
-import com.tset.release.manager.domain.model.SystemModel
+import com.release.manager.data.access.repository.SystemRepository
+import com.release.manager.domain.dto.ServiceDto
+import com.release.manager.domain.dto.toModel
+import com.release.manager.domain.model.SystemModel
 import io.mockk.every
 import io.mockk.verify
 import org.junit.jupiter.api.Assertions

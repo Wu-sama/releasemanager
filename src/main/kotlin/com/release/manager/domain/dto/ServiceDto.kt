@@ -1,6 +1,6 @@
-package com.tset.release.manager.domain.dto
+package com.release.manager.domain.dto
 
-import com.tset.release.manager.domain.model.ServiceModel
+import com.release.manager.domain.model.ServiceModel
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.Positive

@@ -1,7 +1,7 @@
-package com.tset.release.manager
+package com.release.manager
 
-import com.tset.release.manager.data.access.repository.SystemRepository
-import com.tset.release.manager.domain.model.SystemModel
+import com.release.manager.data.access.repository.SystemRepository
+import com.release.manager.domain.model.SystemModel
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith

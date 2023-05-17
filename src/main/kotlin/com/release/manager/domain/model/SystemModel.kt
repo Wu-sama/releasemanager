@@ -1,4 +1,4 @@
-package com.tset.release.manager.domain.model
+package com.release.manager.domain.model
 
 import javax.persistence.CascadeType
 import javax.persistence.Column

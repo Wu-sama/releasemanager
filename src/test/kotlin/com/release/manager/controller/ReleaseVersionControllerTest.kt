@@ -1,8 +1,8 @@
-package com.tset.release.manager.controller
+package com.release.manager.controller
 
 import com.ninjasquad.springmockk.MockkBean
-import com.tset.release.manager.service.ReleaseVersionService
-import com.tset.release.manager.domain.dto.ServiceDto
+import com.release.manager.service.ReleaseVersionService
+import com.release.manager.domain.dto.ServiceDto
 import io.mockk.every
 import io.mockk.verify
 import org.junit.jupiter.api.Assertions.assertNotNull

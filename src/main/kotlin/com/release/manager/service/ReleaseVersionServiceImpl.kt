@@ -1,11 +1,11 @@
-package com.tset.release.manager.service
+package com.release.manager.service
 
-import com.tset.release.manager.data.access.repository.SystemRepository
-import com.tset.release.manager.domain.dto.ServiceDto
-import com.tset.release.manager.domain.dto.toModel
-import com.tset.release.manager.domain.model.ServiceModel
-import com.tset.release.manager.domain.model.SystemModel
-import com.tset.release.manager.domain.model.toDto
+import com.release.manager.data.access.repository.SystemRepository
+import com.release.manager.domain.dto.ServiceDto
+import com.release.manager.domain.dto.toModel
+import com.release.manager.domain.model.ServiceModel
+import com.release.manager.domain.model.SystemModel
+import com.release.manager.domain.model.toDto
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional

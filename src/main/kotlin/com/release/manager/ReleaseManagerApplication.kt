@@ -1,4 +1,4 @@
-package com.tset.release.manager
+package com.release.manager
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
